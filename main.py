@@ -3,13 +3,6 @@ import os
 from dotenv import load_dotenv
 import app
 
-load_dotenv()
-
-# OPENCV:  BLUE GREEN RED
-BLACK = (0, 0, 0, 255)
-WHITE = (255, 255, 255, 255)
-RED = (0, 0, 255, 255)
-
 
 class Error(Exception):
     """Base error Class"""
@@ -25,6 +18,7 @@ class ImageNotFound(Error):
 
 if __name__ == "__main__":
     try:
+        load_dotenv()
         ORIGINAL_PIC = os.getenv("ORIGINAL_PIC")
         STARS_ONLY_PIC = os.getenv("STARS_ONLY_PIC")
         METEORS_ONLY_PIC = os.getenv("METEORS_ONLY_PIC")
@@ -50,9 +44,6 @@ if __name__ == "__main__":
         print(
             f"Number of Meteros that will probably fall in the water: {meteorCount-horizontalMeteors}"
         )
-        # didn't work
-        # print("Hiddent Text: ", app.readingTest(cv2.imread(DOTS_ONLY_PIC)))
-        # print("Hiddent Text: ", app.readingTest(cv2.imread(LOW_ALPHA_ONLY_PIC)))
 
     except ImageNotFound:
         print(
