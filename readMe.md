@@ -22,7 +22,7 @@ As estrelas são representadas pela cor branca, RGB(255, 255, 255)
 Essa task foi resolvida com duas etapas:
 -  varrer a imagem original e para cada pixel que não for branco, pinta-lo de branco e para cada pixel que for branco, pinta-lo de preto
   - Essa etapa me resulta em uma imagem de fundo branco com todas as estrelas em preto
-  - ![imagem](./OUTPUT_IMAGES/blackStarsOnWhite.png)
+  - ![task1](./OUTPUT_IMAGES/blackStarsOnWhite.png)
 - Varrer a imagem produzina na etapa 1 e contar cada pixel preto na imagem.
 
 ## task 2 - Count the number of Meteors
@@ -32,7 +32,7 @@ As estrelas são representadas pela cor vermelha, RGB(255, 0, 0)
 Essa task foi resolvida com duas etapas:
 -  varrer a imagem original e para cada pixel que não for branco, pinta-lo de branco.
   - Essa etapa me resulta em uma imagem de fundo branco com todas os meteoros em preto.
-  - ![imagem](./OUTPUT_IMAGES/redMeteorsOnWhite.png)
+  - ![task2](./OUTPUT_IMAGES/redMeteorsOnWhite.png)
 - Varrer a imagem produzina na etapa 1 e contar cada pixel vermelho na imagem.
 
 ## Extra Step on Task 1 and 2 - meteor/star fill
@@ -45,6 +45,23 @@ Para não repetir a contagem de uma estrela ou metoro caso o mesmo fosse maior q
 Para essa etapa, quando um meteoro é encontrado na task 2, antes de pintar os vizinhos, foi contabilizado a altura do mesmo em X e em Y, e se a altura em X fosse maior que a altura em Y, o mesmo foi considerado um meteoro movendo-se na horizontal
 
 para descobrir quantos meteoros cairam na agua, diminui a quantidade de meteoros total com a quantidade dos meteoros que estão na horizal.
+
+
+## Task 4 - Read Text
+
+A principio eu achei que poderia haver um texto escrito e escondido com a layer de opacidade
+
+escrevi um código para varrer a imagem e tudo que tivesse opacidade 100% ficasse branco e tudo com opacidade abaixo de 255 ficasse preto, e, conforme podemos ver na imagem, nada apareceu:
+
+![task4](OUTPUT_IMAGES/lowAlphaOnly.png)
+
+Apos isto, pensei que fosse um `connect the dots` e escrevi um códiigo para deixar em uma mesma imagem, todas as estrelas e os meteros, como podemos ver abaixo:
+
+![task4.1](OUTPUT_IMAGES/dotsOnWhite.png)
+
+Infelizmente não consigo identificar nenhuma letra e uma simples chamada do `pytesseract` não me retornou nenhum texto.
+
+Preciso de mais informações para poder completar essa etapa.
 
 
 ## Meteor Challenge (Part 1)
