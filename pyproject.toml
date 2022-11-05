@@ -7,6 +7,9 @@ authors = ["maiaatala <ana.atala@unemat.br>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Pillow = "^9.3.0"
+opencv-python = "^4.6.0"
+pytesseract = "^0.3.10"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.10.0"
