@@ -1,4 +1,6 @@
-from .recursiveFunctions import fillNeighbors, xLen, yLen
+# from .recursiveFunctions import fillNeighbors
 from .countStars import countStars
-from .countMeteors import countMeteors
-from .readText import dotsOnly, zeroAplhaOnly, readingTest
+
+# from .countMeteors_old import countMeteors
+from .readText import readingText
+from .countMeteors import countMeteorsAndWaterMeteors

@@ -1,36 +1,40 @@
 import cv2
-from . import fillNeighbors, xLen, yLen
 
 # OPENCV:  BLUE GREEN RED
 WHITE = (255, 255, 255, 255)
 RED = (0, 0, 255, 255)
+BLUE = (255, 0, 0, 255)
 
 
 def meteorsOnly(picture, output):
     xsz, ysz = picture.shape[:2]
-    temp = picture
     for x in range(xsz):
         for y in range(ysz):
-            (b, g, r, _) = temp[x, y]
-            if (b, g, r, _) == RED:
-                temp[x, y] = RED
-            else:
-                temp[x, y] = WHITE
-    cv2.imwrite(output, temp)
+            (b, g, r, _) = picture[x, y]
+            if (b, g, r, _) != RED and (b, g, r, _) != BLUE:
+                picture[x, y] = WHITE
+    cv2.imwrite(output, picture)
     return picture
 
 
-def countMeteors(picture, output):
+def countMeteorsAndWaterMeteors(picture, output):
     picture = meteorsOnly(picture, output)
-    count = hCount = 0
-    picture
+    count = overWater = loopCount = 0
+    isOverWater = False
     xsz, ysz = picture.shape[:2]
     for y in range(ysz):
+        loopCount = 0
+        isOverWater = False
         for x in range(xsz):
             (b, g, r, _) = picture[x, y]
-            if (b, g, r, _) == RED:
-                count += 1
-                if yLen(picture, ysz, x, y) > xLen(picture, xsz, x, y):
-                    hCount += 1
-                fillNeighbors(picture, xsz, ysz, x, y)
-    return count, hCount
+            if g == 255:
+                continue
+            elif r == 255:
+                loopCount += 1
+            elif b == 255:
+                isOverWater = True
+        count += loopCount
+        if isOverWater:
+            overWater += loopCount
+
+    return count, overWater

@@ -110,17 +110,6 @@ numpy = [
 ]
 
 [[package]]
-name = "packaging"
-version = "21.3"
-description = "Core utilities for Python packages"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
-
-[[package]]
 name = "pathspec"
 version = "0.10.1"
 description = "Utility library for gitignore style pattern matching of file paths."
@@ -164,29 +153,6 @@ python-versions = ">=3.6"
 plugins = ["importlib-metadata"]
 
 [[package]]
-name = "pyparsing"
-version = "3.0.9"
-description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "main"
-optional = false
-python-versions = ">=3.6.8"
-
-[package.extras]
-diagrams = ["railroad-diagrams", "jinja2"]
-
-[[package]]
-name = "pytesseract"
-version = "0.3.10"
-description = "Python-tesseract is a python wrapper for Google's Tesseract-OCR"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-packaging = ">=21.3"
-Pillow = ">=8.0.0"
-
-[[package]]
 name = "python-dotenv"
 version = "0.21.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -216,7 +182,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "cff05543a069a6e4775b2916fd30ea0458267850c7f04b766cbd0bb9cb332940"
+content-hash = "7aed2cae5bfb9c41f8d535cfc32c59a7042c65bc129016114eadb9fc6b7949c3"
 
 [metadata.files]
 asttokens = []
@@ -231,13 +197,10 @@ mypy-extensions = [
 ]
 numpy = []
 opencv-python = []
-packaging = []
 pathspec = []
 pillow = []
 platformdirs = []
 pygments = []
-pyparsing = []
-pytesseract = []
 python-dotenv = []
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
