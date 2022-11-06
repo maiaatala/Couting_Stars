@@ -80,4 +80,17 @@ Infelizmente não consigo identificar nenhuma letra e uma simples chamada do `py
 
 Apos não conseguir encontrar nada similar a uma palava por focar no canal alpha do RGB, ou em isolar diferentes canais do RGB, ou em isolar as estrelas e os meteoros, pesquisei sobre **Steganography**, mais notavelmente em [link1](https://ctfs.github.io/resources/topics/steganography/invisible-text/README.html) e [link2](https://www.geeksforgeeks.org/image-steganography-using-opencv-in-python/), sem sucesso.
 
+Por fim, no arquivo `test.py` tentei retirar os valores de red e de green e de blue da foto, mas nada apareceu interessante
+
+![noRed](testOUTPUT/noRed.png)
+![noBlue](testOUTPUT/noBlue.png)
+![noGreen](testOUTPUT/noGreen.png)
+
+E então, tentei somar a quantidade de cada estrela e meteoro por linha e transforma-los em ascii, mas a string de resposta que tive foi:
+
+![lastTry](lastPhraseTry.png)
+
+Que não me parece ser nenhuma resposta relevante.
+Por falta de tempo e de conhecimentos, fica por aqui a minha tentativa da task 4.
+
 Preciso de mais informações para poder completar essa etapa.

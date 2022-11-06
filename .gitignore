@@ -42,6 +42,7 @@
 *.sql
 *.sqlite
 README.docx
+*.docx
 
 # OS generated files #
 ######################
